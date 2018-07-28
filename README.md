@@ -14,7 +14,7 @@
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  #建立一个socket客户端
         s.connect(('127.0.0.1', 9999))                         #连接到ip池服务器相应的地址默认是127.0.0.1:9999  可以自己在代码中修改。
         print(s.recv(1024).decode('utf-8'))                    #显示服务器欢迎信息
-	a = input('请输入你要干什么:')
+		a = input('请输入你要干什么:')
         s.send(a.encode('utf-8'))                              #输入get a new proxy
         print(s.recv(1024).decode('utf-8'))                    #打印获取到的proxy详情
         s.send(b'exit')                                        #向服务器发送exit来停止服务器的接收功能
