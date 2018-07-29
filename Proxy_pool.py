@@ -70,8 +70,8 @@ def set_get_choose(d):
             proxies = get_proxy(response.text)
             for proxy in proxies:
                 d.append(proxy)
-        # 每隔3分钟刷新一次保证IP池的新鲜性
-        time.sleep(10)
+        # 每隔10分钟刷新一次保证IP池的新鲜性
+        time.sleep(600)
         a += 1
 
 
